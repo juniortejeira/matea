@@ -8,6 +8,7 @@ main{
     align-items: center;
     justify-content: center;
     height: calc(100vh - 47px);
+    padding: 0 20px;
 }
 main > h2 {
     margin-bottom: 10px;
