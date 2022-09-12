@@ -121,3 +121,20 @@ main{
     text-align: center;
     margin-bottom: 10px;
 }
+
+
+@media screen and (max-width: 555px) {
+    main{
+        flex-direction: column;
+    }
+    #filters{
+        max-width: 100%;
+        border: none;
+    }
+    #filters input , #filter-btn{
+        padding: 9px !important;
+    }
+    #rooms-list > li {
+        max-width: 100%;
+    }
+}
