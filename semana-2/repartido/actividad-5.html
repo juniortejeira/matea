@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="padre">
+			<p>...</p>
+			<p>...</p>
+			<img
+				src="https://ihdemu.com/images/blog/que-es-lorem-ipsum.jpg"
+				alt="lorem ipsum"
+			/>
+		</div>
+
+		<script>
+			/* 
+        1- Inspecciona el modelo de objeto de “#padre” y guarda todos sus hijos en una variable, en una sola línea de código.
+      */
+			const childrens = document.querySelector("#padre").children
+			console.log(childrens)
+
+			/*
+        2- Accede a la imágen de dicha variable y guarda su atributo src en una variable con el mismo nombre.
+      */
+			let src2 = childrens[2].src // se llama src2 para no chocar con la desestructuracion
+			console.log(src2)
+
+			/* 
+        2.1) ¿Puedes implementar desestructuración para resolver este ejercicio? 
+      */
+			let { src } = childrens[2]
+			console.log(src)
+
+			/*
+        Utilizando el mismo array, accede al texto del segundo párrafo.
+			*/
+			let text = childrens[1].textContent
+
+			/*
+        Añade una cadena a dicho texto y modifica el DOM para ver reflejado el cambio.
+      */
+			text += "KIONDAAAAAAAA"
+			childrens[1].textContent = text
+		</script>
+	</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<button onclick="ejercicio1()">EJERCICIO 1</button>
+		<hr />
+		<button id="btn2">EJERCICIO 2</button>
+		<hr />
+		<button id="BTN-3">EJERCICIO 3</button>
+		<hr />
+		<div id="ejercicio-4">
+			<button id="1">EJ-4 BTN-1</button>
+			<button id="2">EJ-4 BTN-2</button>
+			<button id="3">EJ-4 BTN-3</button>
+			<button id="4">EJ-4 BTN-4</button>
+			<button id="5">EJ-4 BTN-5</button>
+		</div>
+		<hr />
+		<input type="text" placeholder="EJERCICIO 5" id="input-5" />
+		<hr />
+		<input type="text" placeholder="EJERCICIO 6" id="input-6" />
+		<p id="p-6"></p>
+		<script>
+			/*
+			     1- Crea un botón. Agrégale el atributo onclick y asignarle una función que loguee “Ha clickeado este botón {cantidad de veces clickeadas} veces”.
+			*/
+			let counter1 = 0
+			const ejercicio1 = () =>
+				console.log(`El boton se clickeo ${++counter1} veces.`)
+
+			/*
+			     2- Resuelve el mismo problema utilizando el API de Escucha de Eventos (addEventListener) del DOM.
+			*/
+			let counter2 = 0
+			document
+				.querySelector("#btn2")
+				.addEventListener("click", () =>
+					console.log(`El boton se clickeo ${++counter2} veces.`)
+				)
+			/*
+			     3- Recibiendo el evento - El callback que pasamos al addEventListener recibe como parámetro un Objeto del tipo Event. Trabajemos con él. [
+			       addEventListener(‘click’, function(evento) {...}) ]
+			       Asignale un id al botón. Accediendo al evento pasado al listener, escribe en la consola “Botón {id del botón} clickeado {veces clickeado} veces”.
+			*/
+
+			let counter3 = 0
+			document.getElementById("BTN-3").addEventListener("click", (event) => {
+				const id = event.target.id
+				console.log(`El boton ${id} se clickeo ${++counter3} veces.`)
+			})
+			/*
+			     4- Crea 5 botones con id’s únicos. Añada a todos ellos un eventListener que loguee cuantas veces se clickeo el botón con dicho id. Ten en cuenta que con un forEach puedes realizar una única vez el código requerido.
+			*/
+			document.querySelectorAll("#ejercicio-4 > button").forEach((button) => {
+				let counter = 0
+				button.addEventListener("click", (event) => {
+					const id = event.target.id
+					console.log(`El boton ${id} se clickeo ${++counter} veces.`)
+				})
+			})
+
+			/*
+			     5- Escucha el evento input de un elemento input y loguea en la consola su valor.
+			*/
+			let input = document.querySelector("#input-5")
+			input.addEventListener("input", () => console.log(input.value))
+			/*
+			6- Modifica dicho evento a fin de insertar dicho valor en el DOM (en un párrafo).
+			*/
+			let input2 = document.querySelector("#input-6")
+			let p = document.querySelector("#p-6")
+			input2.addEventListener("input", () => (p.textContent = input2.value))
+		</script>
+	</body>
+</html>
