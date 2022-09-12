@@ -8,27 +8,18 @@
 body{
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    text-align: center;
-}
-main{
-    flex: 1;
-}
-h1, h2, h3{
-    color: rgb(3, 3, 116);
+    min-height: 100vh;
 }
 
-h2{
-    padding: 10px;
-}
 ul, ol{
     list-style: none;
 }
 /*Nav*/
-.nav{
-    background-color: rgba(132, 172, 245, 0.808);
+#navbar{
+    background-color: #333333;
+    width: 100%;
 }
-.nav > div{
+#navbar > div{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,46 +27,76 @@ ul, ol{
     width: 100%;
     margin: auto;
     gap: 10px;
-    padding: 10px;
+    padding: 10px 20px;
 }
-
-.nav a{
+#navbar ul{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+#navbar a{
     text-decoration: none;
 }
-.nav  h1,
-.nav  a{
+#navbar  h1,
+#navbar  a{
     margin: 0;
     font-size: 20px;
+    color: #fff;
 }
-/*Banner*/
-
-.banner>img {
-    width: 100%;
-}
-
-
-/*Habitaciones*/
-
-.rooms__img{
-    width: 10%;
-    height: 10%;
-}
-
-/*Sobre nosotros*/
-#Sobrenosotros{
-    height: 40%;
-    
-}
-
-/*Contacto*/
 
 /*Footer*/
 footer{
-    background-color: #cdcdcd;
+    border-top: 1px solid #d6d6d6;
+    background-color: #fcfcfc;
 }
-footer > div{
+#footer__logo{
+    text-align: center;
+    margin: 10px 0;
+    color: #2196f3;
+}
+#footer__middle-section{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 50px;
+    margin: 20px 0;
+}
+#footer__middle-section > p{
+    max-width: 250px;
+}
+#footer__social-media{
+    display: flex;
+    justify-content: center;
+    gap:50px;
+    width: 100%;
+    margin: 20px auto;
+}
+#footer__social-media img{
+    height: 26px
+}
+#footer__matea{
+    padding: 10px 0;
+    background-color: #333333;
+    text-align: center;
+    color: #fff ;
 }
 
 
+@media screen and (max-width: 640px) {
+    #footer__middle-section{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+  @media screen and (max-width: 555px) {
+    #navbar  h1,
+    #navbar  a{
+        margin: 0;
+        font-size: 18px;
+        color: #fff;
+    }
+  }

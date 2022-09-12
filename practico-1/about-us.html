@@ -5,17 +5,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Guillermo Hotel</title>
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-			crossorigin="anonymous"
-		/>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-			crossorigin="anonymous"
-		></script>
 		<link rel="stylesheet" href="css/styles.css" />
 		<script
 			src="https://kit.fontawesome.com/bce215eff9.js"
@@ -24,40 +13,75 @@
 	</head>
 
 	<body>
-		<!--------------Navegador--------------->
-		<nav class="nav">
-			<div>
-				<h1>Guillermo hotel</h1>
-				<a href="./">Inicio</a>
-				<a href="./rooms-list.html">Habitaciones</a>
-				<a href="./about-us.html">Sobre nosotros</a>
-				<a href="./contact.html">Contacto</a>
-				<a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
-				<a href="www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
-				<a href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
-			</div>
-		</nav>
-		<main></main>
+			<!--------------Navbar--------------->
+			<nav id="navbar">
+				<div>
+					<a href="./">
+						<h1>Guillermo hotel</h1>
+					</a>
+					<ul>
+						<li>
+							<a href="./about-us.html">Sobre Nosotros</a>
+						</li>
+						<li>
+							<a href="./contact.html">Contacto</a>
+						</li>
+						<li>
+							<a href="./rooms-list.html">Reservar</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!--------------Sobre nosotros--------------->
 
-		<!--------------Footer--------------->
-		<footer>
-			<div>
-				<ul>
-					<li>Hotel Guillermo</li>
-					© SMART HOTEL MONTEVIDEO
-					<li>
-						Dirección: Andes 1240 (esquina Soriano), Centro de Montevideo,
-						Uruguay.
-					</li>
+			<div class="card bg-light text-dark w-75" id="Sobrenosotros">
+				<img
+					src="./img/Hotel.jpg"
+					class="w-50"
+					alt="guillermoHotel"
+					height="300"
+				/>
+				<div class="card-img-overlay text-end w-100">
+					<h5 class="card-title">Card title</h5>
+					<pre class="card-text">
+This is a wider card with supporting 
+                    text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</pre
+					>
+					<p class="card-text">Todos los derechos reservados</p>
+				</div>
+			</div>
+		</main>
+
+	<!--------------Footer--------------->
+	<footer>
+		<div>
+			<h2 id="footer__logo">Hotel Guillermo</h2>
+			<div id="footer__middle-section">
+				<p>Andes 1240 (esquina Soriano), Centro de Montevideo, Uruguay.</p>
+				<ul id="footer__contact">
 					<li>E-mail: info@smarthotelmontevideo.com</li>
 					<li>Front Desk: +598 95 081 617</li>
-				</ul>
-				<ul>
 					<li>Lunes a Domingos de 9.30 a 17.30</li>
 					<li>Reservas +5981234156789</li>
 				</ul>
 			</div>
-			<p>Hecho por Gabriel y Pablo para MATEA</p>
-		</footer>
-	</body>
+		</div>
+		<ul id="footer__social-media">
+			<li>
+				<a href="https://www.facebook.com"
+					><img src="./svg/facebook.svg"
+				/></a>
+			</li>
+			<li>
+				<a href="https://www.twitter.com"><img src="./svg/twitter.svg" /></a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com"
+					><img src="./svg/instagram.svg"
+				/></a>
+			</li>
+		</ul>
+		<p id="footer__matea">Hecho por Gabriel y Pablo para MATEA.</p>
+	</footer>
 </html>

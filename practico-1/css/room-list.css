@@ -118,5 +118,6 @@ main{
     margin: 10px 30px;
 }
 .room__price > p{
+    text-align: center;
     margin-bottom: 10px;
 }
