@@ -1,3 +1,22 @@
-# Practico 1
+# Guillermo Hotel
 
-Trabaje junto a [Gabriel](https://github.com/Gabriel-A-Sosa) realizando una web sencilla con el fin de repasar las bases de javascript, html, css y git.
+Web creada para la empresa ficticia "Guillermo Hotel" en el marco del práctico 1 del bootcamp de Matea.
+
+## Compatibilidad 🚀
+
+La web es compatible con cualquier navegador.
+
+### Versión 📋
+
+0.1
+
+### Tecnologías 🔧
+
+Construida con HTML, css, Javascript y se utilizó también bootstrap.
+
+- **Iconos** - [Fontawesome](https://fontawesome.com/)
+
+## Autores ✒️
+
+- **Gabriel Sosa** - [Gabriel-A-Sosa](https://github.com/Gabriel-A-Sosa)
+- **Pablo Peña** - [sebas-pena](https://github.com/sebas-pena)
