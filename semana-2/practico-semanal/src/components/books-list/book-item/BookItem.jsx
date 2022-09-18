@@ -5,8 +5,8 @@ const BookItem = ({ title, author, pages, genre }) => {
 		<tr className="book-item__ctn">
 			<td>{title}</td>
 			<td>{author}</td>
-			<td>{pages}</td>
 			<td>{genre}</td>
+			<td>{pages}</td>
 		</tr>
 	)
 }
