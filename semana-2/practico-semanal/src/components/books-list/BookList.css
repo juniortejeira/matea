@@ -1,0 +1,15 @@
+.book-list__table{
+  background-color: #d9d9d9;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: left;
+  border-collapse: collapse;
+
+}
+.book-list__table > thead{
+  color: #333;
+}
+.book-list__table > thead > tr > th{
+  padding: 7px 15px;
+  font-weight: 600;
+}
