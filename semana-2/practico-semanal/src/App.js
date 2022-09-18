@@ -72,7 +72,7 @@ function App() {
       <Header />
       <main id="main">
         <Filters options={genres} setFilter={setFilter} actualFilter={filter} />
-        <input className='filter__pages' type="number" onChange={handleInputChange} placeholder="Maximo paginas" />
+        <input className='filter__pages' type="number" onChange={handleInputChange} placeholder="Máximo páginas" />
         <BooksList books={filteredBooks} />
       </main>
       <Footer />
