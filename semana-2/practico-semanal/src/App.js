@@ -30,16 +30,49 @@ const books = [
     pages: 296,
     genre: "Aventura",
   },
+  {
+    title: "Thrones",
+    author: "Georgetin",
+    pages: 204,
+    genre: "Fantasia",
+  },
+  {
+    title: "The Game",
+    author: "Collins",
+    pages: 274,
+    genre: "Novela",
+  },
+  {
+    title: "The Place",
+    author: "Kass A.",
+    pages: 536,
+    genre: "Ciencia ficción",
+  },
+  {
+    title: "Les trois",
+    author: "Dumas",
+    pages: 196,
+    genre: "Aventura",
+  },
 ]
 function App() {
-  const [filter, setFilter] = useState(null)
+  const [filter, setFilter] = useState({ genre: null, pages: null })
   const genres = [...new Set(books.map(book => book.genre))]
-  let filteredBooks = books.filter(book => filter === null || book.genre === filter)
+  let filteredBooks = books.filter(
+    book => (
+      (filter.genre === null || book.genre === filter.genre) &&
+      (filter.pages === null || book.pages <= filter.pages)
+    )
+  )
+  const handleInputChange = (e) => {
+    setFilter({ ...filter, pages: e.target.value || null })
+  }
   return (
     <div id="app">
       <Header />
       <main id="main">
         <Filters options={genres} setFilter={setFilter} actualFilter={filter} />
+        <input className='filter__pages' type="number" onChange={handleInputChange} placeholder="Maximo paginas" />
         <BooksList books={filteredBooks} />
       </main>
       <Footer />
