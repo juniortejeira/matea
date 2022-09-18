@@ -6,7 +6,7 @@ const Filters = ({ options, setFilter, actualFilter }) => {
 			<button
 				className={actualFilter === null ? "active" : ""}
 				onClick={() => {
-					setFilter(null)
+					setFilter({ ...actualFilter, genre: null })
 				}}
 			>
 				Todos
@@ -16,7 +16,7 @@ const Filters = ({ options, setFilter, actualFilter }) => {
 					key={option}
 					className={actualFilter === option ? "active" : ""}
 					onClick={() => {
-						setFilter(option)
+						setFilter({ ...actualFilter, genre: option })
 					}}
 				>
 					{option}
