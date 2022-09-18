@@ -4,7 +4,7 @@ const Filters = ({ options, setFilter, actualFilter }) => {
 	return (
 		<div className="filters__ctn">
 			<button
-				className={actualFilter === null ? "active" : ""}
+				className={actualFilter.genre === null ? "active" : ""}
 				onClick={() => {
 					setFilter({ ...actualFilter, genre: null })
 				}}
@@ -14,7 +14,7 @@ const Filters = ({ options, setFilter, actualFilter }) => {
 			{options.map((option) => (
 				<button
 					key={option}
-					className={actualFilter === option ? "active" : ""}
+					className={actualFilter.genre === option ? "active" : ""}
 					onClick={() => {
 						setFilter({ ...actualFilter, genre: option })
 					}}
