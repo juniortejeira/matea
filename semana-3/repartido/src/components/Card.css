@@ -1,0 +1,27 @@
+.card {
+  height: 100%;
+  max-width: 400px;
+  background-color: #414043;
+  color: #fff
+}
+.card__img {
+  width: 100%;
+}
+.card__info{
+  padding: 0 20px;
+  padding-bottom: 20px;
+}
+.card__title {
+  font-size: 24px;
+  line-height: 1;
+  margin: 10px 0;
+
+}
+.card__summary-txt{
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.card__description {
+  font-size: 14px;
+}
