@@ -1,0 +1,29 @@
+.clock{
+  display: flex;
+  justify-content: center;
+  width: max-content;
+  margin: auto;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 10px 0;
+
+}
+
+.clock > span{
+  font-size: 50px;
+  transform: translateY(-3px);
+  line-height: 1;
+}
+.clock__digit-ctn{
+  text-align: center;
+  padding: 0 10px;
+}
+
+.clock__digit-ctn > p{
+  font-size: 50px;
+  line-height: 1;
+}
+.clock__digit-ctn > span{
+  font-size: 15px;
+  font-weight: 500;
+}
