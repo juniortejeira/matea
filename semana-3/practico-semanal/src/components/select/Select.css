@@ -1,0 +1,21 @@
+.select__ctn{
+  position: relative;
+  width: 100%;
+}
+.select{
+  height: 35px;
+  padding: 0 8px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  font-size: 15px;
+  width: 100%;
+}
+.select.error{
+  border: 1px solid red;
+}
+.select__error{
+  position: absolute;
+  bottom: -3px;
+  color: red;
+  font-size: 14px;
+}
